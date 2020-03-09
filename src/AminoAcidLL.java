@@ -22,8 +22,21 @@ class AminoAcidLL{
    * If it should be at this node, increments it and stops, 
    * if not passes the task to the next node. 
    * If there is no next node, add a new node to the list that would contain the codon. 
+   *this will (recursively) add the codon to the linked list, if the Amino Acid already
+   *exists it will add it to the count on that node, otherwise it will create a new node.
    */
   private void addCodon(String inCodon){
+    //add new codon to linked list recursively
+    //AminoAcidLL newNode = new AminoAcidLL(inCodon);
+    //if statement to see if codon exists, if it does exist, then move to the next and add 1 to that specific count
+    if(AminoAcidLL.next!= null)
+      add(AminoAcidLL.next, inCodon);
+    else{
+      AminoAcidLL
+      ++inCodon.item;
+      return inCodon;
+      addCodon(inCodon + 1);
+
   
   }
 
